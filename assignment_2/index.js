@@ -5,9 +5,10 @@ function mergeSort(array) {
     }
 
     mid = Math.floor(array.length/2)
-    array1 = mergeSort(array.slice(0,mid))
-    array2 = mergeSort(array.slice(mid))
-
+    array1 = array.slice(0,mid)
+    array1=array1.sort((a,b)=>a-b)
+    array2 = array.slice(mid)
+    array2=array2.sort((a,b)=>a-b)
 
     return merge(array1, array2)
 }
